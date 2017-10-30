@@ -1,108 +1,22 @@
-package com.techelevator.npgeek.model;
+package com.techelevator.campground.model;
 
-import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
+import java.time.LocalDate;
 
 public class Park {
 
+	private long parkId;
 	private String name;
-	private String state;
+	private String location;
+	private LocalDate dateEstablished;
+	private long area;
+	private long visitors;
 	private String description;
-	private String parkCode;
-	private int acreage;
-	private int elevationInFeet;
-	private int numberOfCampsites;
-	private String climate;
-	private int yearFounded;
-	private int annualVisitorCount;
-	private String inspirationalQuote;
-	private String inspirationalQuoteSource;
-	private int entryFee;
-	private int numberOfAnimalSpecies;
-	private float milesOfTrail;
-	private List<Forecast> parkForecasts = new ArrayList<>();
-	private int count;
-	NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US);
-	NumberFormat moneyFormat = NumberFormat.getCurrencyInstance(Locale.US);
 	
-	public String getParkCode() {
-		return parkCode;
+	public long getParkId() {
+		return parkId;
 	}
-	public String getAcreage() {
-		String acreageString = numberFormat.format(acreage);
-		return acreageString;
-	}
-	public void setAcreage(int acreage) {
-		this.acreage = acreage;
-	}
-	public String getElevationInFeet() {
-		String elevationString = numberFormat.format(elevationInFeet);
-		return elevationString;
-	}
-	public void setElevationInFeet(int elevationInFeet) {
-		this.elevationInFeet = elevationInFeet;
-	}
-	public int getNumberOfCampsites() {
-		return numberOfCampsites;
-	}
-	public void setNumberOfCampsites(int numberOfCampsites) {
-		this.numberOfCampsites = numberOfCampsites;
-	}
-	public String getClimate() {
-		return climate;
-	}
-	public void setClimate(String climate) {
-		this.climate = climate;
-	}
-	public int getYearFounded() {
-		return yearFounded;
-	}
-	public void setYearFounded(int yearFounded) {
-		this.yearFounded = yearFounded;
-	}
-	public String getAnnualVisitorCount() {
-		String visitorString = numberFormat.format(annualVisitorCount);
-		return visitorString;
-	}
-	public void setAnnualVisitorCount(int annualVisitorCount) {
-		this.annualVisitorCount = annualVisitorCount;
-	}
-	public String getInspirationalQuote() {
-		return inspirationalQuote;
-	}
-	public void setInspirationalQuote(String inspirationalQuote) {
-		this.inspirationalQuote = inspirationalQuote;
-	}
-	public String getInspirationalQuoteSource() {
-		return inspirationalQuoteSource;
-	}
-	public void setInspirationalQuoteSource(String inspirationalQuoteSource) {
-		this.inspirationalQuoteSource = inspirationalQuoteSource;
-	}
-	public String getEntryFee() {
-		String entryFeeString = moneyFormat.format(entryFee);
-		return entryFeeString;
-	}
-	public void setEntryFee(int entryFee) {
-		this.entryFee = entryFee;
-	}
-	public int getNumberOfAnimalSpecies() {
-		return numberOfAnimalSpecies;
-	}
-	public void setNumberOfAnimalSpecies(int numberOfAnimalSpecies) {
-		this.numberOfAnimalSpecies = numberOfAnimalSpecies;
-	}
-	public String getMilesOfTrail() {
-		String trailString = numberFormat.format(milesOfTrail);
-		return trailString;
-	}
-	public void setMilesOfTrail(float milesOfTrail) {
-		this.milesOfTrail = milesOfTrail;
-	}
-	public void setParkCode(String parkCode) {
-		this.parkCode = parkCode;
+	public void setParkId(long parkId) {
+		this.parkId = parkId;
 	}
 	public String getName() {
 		return name;
@@ -110,30 +24,40 @@ public class Park {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getState() {
-		return state;
+	public String getLocation() {
+		return location;
 	}
-	public void setState(String location) {
-		this.state = location;
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public LocalDate getDateEstablished() {
+		return dateEstablished;
+	}
+	public void setDateEstablished(LocalDate dateEstablished) {
+		this.dateEstablished = dateEstablished;
+	}
+	public long getArea() {
+		return area;
+	}
+	public void setArea(long area) {
+		this.area = area;
+	}
+	public long getVisitors() {
+		return visitors;
+	}
+	public void setVisitors(long visitors) {
+		this.visitors = visitors;
 	}
 	public String getDescription() {
 		return description;
 	}
+	
+	public String toString() {
+		return this.name;
+	}
+	
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public List<Forecast> getParkForecasts() {
-		return parkForecasts;
-	}
-	public void setParkForecasts(List<Forecast> parkForecasts) {
-		this.parkForecasts = parkForecasts;
-	}
-	public int getCount() {
-		return count;
-	}
-	public void setCount(int count) {
-		this.count = count;
-	}
-	
 	
 }
