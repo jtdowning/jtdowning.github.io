@@ -1,4 +1,15 @@
-body{
 
-    background-color: b3b3b3;
+
+@import url('https://fonts.googleapis.com/css?family=Cardo|Marcellus');
+
+
+body {
+    background-color: rgb(182, 182, 182);
+    font-family: 'Marcellus', serif;
+}
+h1 {
+    color: rgb(39, 102, 60);
+}
+p {
+    color: rgb(59, 43, 43);
 }
